@@ -5,21 +5,21 @@ namespace Player_project
 {
     public class Player
     {
-        public string name;
-        public int level;
-        public int exp;
-        public int steps_taken;
-        public int health;
-        public int max_health;
-        public int strength;
-        public int dexterity;
-        public int intellect;
+        public string name { get; set; }
+        public int level { get; set; }
+        public int exp { get; set; }
+        public int steps_taken { get; set; }
+        public int health { get; set; }
+        public int max_health { get; set; }
+        public int strength { get; set; }
+        public int dexterity { get; set; }
+        public int intellect { get; set; }
         public Player(string name)
         {
             this.name = name;
-            this.strength = 3;
-            this.intellect = 3;
-            this.dexterity = 3;
+            this.strength = 2;
+            this.intellect = 2;
+            this.dexterity = 2;
             this.health = 100;
             this.max_health = 100;
             this.exp = 0;
@@ -38,26 +38,23 @@ namespace Player_project
         public void LevelUp(int experience, Player player)
         {
             player.exp += experience;
-            if (player.exp >= 50)
+            if (player.exp >= player.level * 30)
             {
                 player.level++;
                 player.exp = 0;
                 BoostStats(player);
             }
-            else
-                World.Options(player);
         }
         public void BoostStats(Player player)
         {
-            player.strength += 1;
-            player.dexterity += 1;
-            player.intellect += 1;
-            player.health += 10;
-            player.max_health += 10;
+            player.strength += 2;
+            player.dexterity += 2;
+            player.intellect += 2;
+            player.health += 15;
+            player.max_health += 15;
             System.Console.WriteLine($"{player.name} gained a level and is now {player.level}!");
             System.Threading.Thread.Sleep(1500);
             System.Console.WriteLine("\n");
-            World.Options(player);
         }
     }
 }

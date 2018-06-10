@@ -51,7 +51,12 @@ namespace Player_project
                 Player = wizard;
             }
             System.Console.WriteLine("Game is initializing... Please wait.");
-            System.Threading.Thread.Sleep(5000);
+            using (var progress = new ProgressBar()) {
+			for (int i = 0; i <= 200; i++) {
+				progress.Report((double) i / 200);
+				System.Threading.Thread.Sleep(20);
+                }
+            }
             return Player;
         }
     }

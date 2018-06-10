@@ -8,10 +8,13 @@ namespace Player_project
         {
             if (player.steps_taken < 200)
             {
-                System.Console.WriteLine("Choose an option:");
-                System.Console.WriteLine("1. Build a fire and rest");
-                System.Console.WriteLine("2. No time to rest; must keep moving.");
-                System.Console.WriteLine("3. Exit Game.");
+                System.Console.WriteLine(".......................................");
+                System.Console.WriteLine(".          Choose an option:          .");
+                System.Console.WriteLine(". 1. Build a fire and rest            .");
+                System.Console.WriteLine(". 2. No time to rest; must keep moving.");
+                System.Console.WriteLine(". 3. Exit Game                        .");
+                System.Console.WriteLine(".......................................");
+                System.Console.WriteLine(">");
                 string choice = Console.ReadLine();
                 switch(choice)
                 {
@@ -25,15 +28,21 @@ namespace Player_project
                         System.Console.WriteLine("Thanks for playing!");
                         Environment.Exit(0);
                         break;
+                    default:
+                        Options(player);
+                        break;
                 }
             }
             else
             {
-                System.Console.WriteLine("Choose an option:");
-                System.Console.WriteLine("1. Build a fire and rest");
-                System.Console.WriteLine("2. No time to rest; must keep moving.");
-                System.Console.WriteLine("3. Enter the tower");
-                System.Console.WriteLine("4. Exit Game.");
+                System.Console.WriteLine(".......................................");
+                System.Console.WriteLine(".          Choose an option:          .");
+                System.Console.WriteLine(". 1. Build a fire and rest            .");
+                System.Console.WriteLine(". 2. No time to rest; must keep moving.");
+                System.Console.WriteLine(". 3. Enter the tower                  .");
+                System.Console.WriteLine(". 4. Exit Game                        .");
+                System.Console.WriteLine(".......................................");
+                System.Console.WriteLine(">");
                 string choice = Console.ReadLine();
                 switch(choice)
                     {
@@ -49,6 +58,9 @@ namespace Player_project
                         case "4":
                             System.Console.WriteLine("Thanks for playing!");
                             Environment.Exit(0);
+                            break;
+                        default:
+                            Options(player);
                             break;
                     }
             }
@@ -72,6 +84,7 @@ namespace Player_project
             System.Console.WriteLine("(Queue sad music)");
             System.Threading.Thread.Sleep(1000);
             System.Console.WriteLine("Game Over.");
+            Environment.Exit(0);
         }
         public static void GameVictory(Player player)
         {

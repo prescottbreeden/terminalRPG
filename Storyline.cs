@@ -33,11 +33,11 @@ namespace Player_project
             System.Console.WriteLine("\v");
             System.Console.WriteLine("\v");
             System.Console.WriteLine("The woods are dark... \v");
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
             System.Console.WriteLine("A tower looms in the distance... \v");
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
             System.Console.WriteLine("You hear faint sounds from the forrest...\v");
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
         }
     }
 }

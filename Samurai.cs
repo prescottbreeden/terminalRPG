@@ -4,7 +4,7 @@ namespace Player_project
     {
         public Samurai(string name) : base(name)
         {
-            this.strength = 25;
+            this.strength = 5;
         }
         public void DeathBlow(Enemy enemy)
         {

@@ -2,16 +2,16 @@ namespace Player_project
 {
     public class Spider : Enemy
     {
-        public Spider(string name) : base(name)
+        public Spider(string name, Player player) : base(name, player)
         {
-            this.dexterity = 25;
+            this.dexterity = 1;
         }
-        public void Web(object obj)
+        public void SpecialAttack(object obj)
         {
             if (obj is Player)
             {
                 Player enemy = obj as Player;
-                enemy.health -= this.strength*20;
+                enemy.health -= this.strength*8;
                 System.Console.WriteLine("{0} performs special attack 'WEB' and attacks twice", this.name);
                 System.Console.WriteLine("{0} has {1} health remaining", enemy.name, enemy.health);
                 if (this.health <= 0)

@@ -2,12 +2,11 @@ namespace Player_project
 {
     public class Ninja : Player
     {
-        public string[] abilities;
+        public string[] abilities { get; set; } 
         public Ninja(string name) : base(name)
         {
-            this.dexterity = 25;
+            this.dexterity = 5;
             this.abilities = new string[] {"Attack","Steal","RunAway"};
-            
         }
         public static void Steal(Enemy enemy, Player player)
         {
